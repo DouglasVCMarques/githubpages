@@ -1,0 +1,308 @@
+@charset "UTF-8";
+@import url("https://fonts.googleapis.com/css2?family=Roboto:ital,wght@0,300;0,400;0,500;1,300&display=swap");
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+  -webkit-appearance: none;
+  -moz-appearance: none;
+       appearance: none;
+}
+
+body {
+  width: 100%;
+  background-color: #272727;
+  font-family: "Roboto", sans-serif;
+}
+
+/* Estilizando o menu de navegação*/
+.menu {
+  width: 5%;
+  height: 100%;
+  background-color: rgb(65, 65, 65);
+  padding: 10px;
+  vertical-align: top;
+  text-align: center;
+  position: fixed;
+}
+
+/*Estilizando a div que vai os conteudos do menu de navegação*/
+.content-menu {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  padding-top: 20px;
+}
+
+/* Removendo as bolinhas da lista*/
+li {
+  list-style-type: none;
+}
+
+/* Estilizando os icones para ficarem flexiveis e ter um espaçamento entre eles*/
+#icons {
+  display: flex;
+  gap: 8px;
+}
+
+/* Colocando o cursor de ponteiro ao passar o mouse em cima das tags "a". */
+a {
+  color: white;
+  margin-bottom: 20px;
+  cursor: pointer;
+}
+
+/* Ao passar o mouse em cima, o fundo muda para a cor cinza.*/
+#icons i:hover {
+  color: #727272;
+}
+
+/* Ao passar o mouse em cima, o fundo muda para a cor cinza.*/
+.content-menu i:hover {
+  color: #727272;
+}
+
+/* Box onde vai o conteudo principal do site.*/
+.main {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+}
+
+/* Estilizando para que o formato onde ficará a imagem, fique redondo e de um tamanho especifico.*/
+.image {
+  width: 150px;
+  height: 150px;
+  border-radius: 50%;
+  margin: 20px;
+  background-image: url(assets/images/foto-400.jpeg);
+  background-size: cover;
+}
+
+/* Estilizando onde ficará o Nome "Douglas"*/
+.name {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  color: white;
+  font-size: 25px;
+}
+
+/* Estilizando para colocar a animação de escrever e apagar, as cores, o tamanho do texto, espessura.*/
+.titulo {
+  font-size: 25px;
+  font-weight: 500;
+  color: white;
+  background-color: white;
+  -webkit-background-clip: text;
+  background-clip: text;
+  color: transparent;
+  animation: typing 3s steps(110, end) alternate infinite;
+  white-space: nowrap;
+  border-right: 5px solid;
+  -webkit-text-fill-color: transparent;
+}
+
+#about {
+  display: flex;
+  text-align: justify;
+}
+
+.branco {
+  color: white;
+  font-size: 15px;
+  padding-bottom: 40px;
+  text-align: justify;
+  align-items: center;
+}
+
+.skills {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+/*Estilizando a box Front-End*/
+.front-end {
+  margin: 20px;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  text-align: center;
+  justify-content: center;
+  gap: 10px;
+  width: 250px;
+  height: 250px;
+  background-color: rgb(49, 49, 49);
+  border: none;
+  border-radius: 50px;
+}
+
+/*Estilizando a box Database*/
+.database {
+  margin: 20px;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  text-align: center;
+  justify-content: center;
+  gap: 10px;
+  width: 250px;
+  height: 250px;
+  background-color: rgb(49, 49, 49);
+  border-radius: 50px;
+}
+
+/*Ao passar o mouse em cima, ele muda o fundo para a cor cinza.*/
+.database:hover {
+  background-color: #727272;
+}
+
+/*Ao passar o mouse em cima, ele muda o fundo para a cor cinza.*/
+.front-end:hover {
+  background-color: #727272;
+}
+
+/* Alinhando o texto ao centro e colocando a cor branca na classe competence. */
+.competence {
+  color: white;
+  text-align: center;
+}
+
+/* Criando a box de projetos.*/
+.box-project {
+  padding-top: 10px;
+  display: flex;
+  flex-direction: column;
+  text-align: justify;
+  align-items: center;
+  width: 550px;
+  height: 240px;
+  border-radius: 20px;
+  background-color: #323232;
+  margin-top: 20px;
+}
+
+.box-project:hover {
+  background-color: #727272;
+}
+
+/* Criando a segunda box antes de ir o conteudo*/
+#project {
+  display: flex;
+  justify-content: center;
+  margin-bottom: 20px;
+}
+
+/*Criando a div que vai o conteudo */
+.content {
+  display: flex;
+  flex-direction: column;
+  margin: 10px;
+}
+
+h3.curriculum {
+  margin: 6px;
+}
+
+.curriculum {
+  color: white;
+  text-align: left;
+}
+
+.title-project {
+  color: white;
+}
+
+i {
+  color: white;
+}
+
+/* Criando a responsividade para celulares de 480px no maximo.*/
+@media (max-width: 468px) {
+  .skills {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    flex-wrap: wrap;
+  }
+  .about {
+    display: flex;
+    padding: 20px 20px;
+    align-items: center;
+    text-align: justify;
+  }
+  .box-project {
+    display: flex;
+    width: 50%;
+    height: 100%;
+    justify-content: center;
+    align-items: center;
+  }
+  .menu {
+    display: none;
+  }
+  #education {
+    display: flex;
+    width: 80%;
+    height: 50%;
+    justify-content: center;
+    align-items: center;
+  }
+}
+/*Criando a responsividade para monitores/celulares/tablets de até 910px.*/
+@media (max-width: 910px) {
+  .menu {
+    display: none;
+  }
+}
+/* Criando a animação de escrever e apagar do Titulo "Desenvolvedor Front-End" */
+@keyframes typing {
+  0% {
+    width: 0;
+    border-color: transparent;
+  }
+  50% {
+    border-color: white;
+  }
+  100% {
+    width: 100%;
+    border-color: transparent;
+  }
+}
+/* Estilizando a box educação*/
+#education {
+  display: flex;
+  flex-direction: column;
+  width: 400px;
+  height: 200px;
+  background-color: #323232;
+  border-radius: 50px;
+  margin-top: 35px;
+}
+
+/* Ao passar o mouse em cima, o fundo muda para a cor cinza.*/
+#education:hover {
+  background-color: #727272;
+}
+
+/* Estilizando a box que vai o conteudo da educação*/
+.education-content {
+  padding-top: 10px;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  text-align: center;
+  gap: 4px;
+  color: white;
+}
+
+.facul {
+  font-size: 25px;
+}
+
+.education-content > h5 {
+  padding-top: 20px;
+  font-size: 15px;
+}/*# sourceMappingURL=style.css.map */
